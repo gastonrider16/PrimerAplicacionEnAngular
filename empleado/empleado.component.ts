@@ -13,7 +13,10 @@ export class EmpleadoComponent implements OnInit {
     return this.edad;
   }
   llamaFuncion(value:String){}
-  
+
+  habilitacionCuadro = false
+  usoRegistrado = true
+
   constructor() { }
 
   ngOnInit(): void {

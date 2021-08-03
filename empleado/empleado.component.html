@@ -1,1 +1,9 @@
-<p>Aqui iria un empleado</p>
+<p>Nombre: {{nombre}}</p>
+<p>Apellido: {{apellido}}</p>
+<p>Situacion edad: {{getEdad() < 18 ? "Menor edad" : "Mayor edad"}}</p>
+Introduce la empresa <input type="text" #empresa>
+<br/>
+<br/>
+<input type="button" value="Dale" (click)=llamaFuncion(empresa.value)>
+<br/>
+<p>Empresa: {{empresa.value}}</p>

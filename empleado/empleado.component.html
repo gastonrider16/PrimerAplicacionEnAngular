@@ -1,9 +1,11 @@
 <p>Nombre: {{nombre}}</p>
 <p>Apellido: {{apellido}}</p>
 <p>Situacion edad: {{getEdad() < 18 ? "Menor edad" : "Mayor edad"}}</p>
-Introduce la empresa <input type="text" #empresa>
+Introduce la empresa <input type="text" #empresa (keyup)="0" [disabled]=habilitacionCuadro>
 <br/>
 <br/>
-<input type="button" value="Dale" (click)=llamaFuncion(empresa.value)>
+<!--<input type="button" value="Dale" (click)=llamaFuncion(empresa.value)>-->
 <br/>
 <p>Empresa: {{empresa.value}}</p>
+<br/>
+Registrado <input type="checkbox" [checked]=usoRegistrado />

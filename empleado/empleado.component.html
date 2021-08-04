@@ -8,4 +8,6 @@ Introduce la empresa <input type="text" #empresa (keyup)="0" [disabled]=habilita
 <br/>
 <p>Empresa: {{empresa.value}}</p>
 <br/>
-Registrado <input type="checkbox" [checked]=usoRegistrado />
+{{textoDeRegistro}} <!--INTERPOLACION-->
+<br/>
+Registrado <input type="checkbox" [checked]=usoRegistrado (click)=setUsuarioRegistrado()/>

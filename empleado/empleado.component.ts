@@ -19,9 +19,12 @@ export class EmpleadoComponent implements OnInit {
 
   textoDeRegistro = "No hay nadie registrado";
 
-  setUsuarioRegistrado(){
+  setUsuarioRegistrado(event : Event){
     //alert("Usuario registrado");
-    this.textoDeRegistro = "Usuario registrado";
+    if((<HTMLInputElement>event.target).value == "si")
+      this.textoDeRegistro = "Usuario registrado";
+    else
+      this.textoDeRegistro = "Usuario NO registrado";
   }
 
   constructor() { }

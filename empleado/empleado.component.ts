@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EmpleadoComponent implements OnInit {
   nombre = "Gaston";
   apellido = "Apellido";
+  empresa = "";
   private edad = 16;
   getEdad(){
     return this.edad;
@@ -25,6 +26,10 @@ export class EmpleadoComponent implements OnInit {
       this.textoDeRegistro = "Usuario registrado";
     else
       this.textoDeRegistro = "Usuario NO registrado";
+  }
+
+  cambiaEmpresa(event : Event){
+    this.empresa = (<HTMLInputElement>event.target).value;
   }
 
   constructor() { }
